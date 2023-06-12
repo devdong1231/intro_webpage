@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>자기소개홈페이지</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/pageable@latest/dist/pageable.min.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        </style>
+    </head>
+    <body>
+        <nav id="menu">
+            <ul>
+                <li><a href="#page-1">intro</a></li>
+                <li><a href="#page-2">about</a></li>
+                <li><a href="#page-3">preference</a></li>
+                <li><a href="#page-4">etc</a></li>
+            </ul>
+        </nav>
+
+        <div id="container">
+            <div data-anchor="Page 1"> <!-- id : page-1 -->
+                <p>
+                    <div class="text_box">
+                    <span class="text"></span></div>
+                </p>
+            </div>
+    
+            <div data-anchor="Page 2">
+                <div class="page2_con">
+                    <div id="page_intro">
+                        <div>
+                            <img src="media/내사진.jpg" id="me">
+                        </div>
+                        <div>
+                        <h1>자기소개</h1>
+                            <ul>
+                                <li><span id="li_title">이름</span><span id="li_desc">김동하</span></li>
+                                <li><span id="li_title">생년월일</span><span id="li_desc">2003년 12월 31일</span></li>
+                                <li><span id="li_title">거주지</span><span id="li_desc">서울시 성동구</span></li>
+                                <li><span id="li_title">전화번호</span><span id="li_desc">010-2606-8904</span></li>
+                                <li><span id="li_title">이메일</span><span id="li_desc">devdong1231@gmail.com</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div data-anchor="Page 3">
+                <div class="page3_con">
+                    <div>
+                        <h1>좋아하는 것</h1>
+                        <ul>
+                            <li>게임</li>
+                            <ul>
+                                <li id="like">리그 오브 레전드</li>
+                                <li id="like">스팀 게임들</li>
+                                <li id="like">넥슨 게임들</li>
+                            </ul>
+                            <li>피아노 치기</li>
+                            <li>겨울</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h1>싫어하는 것</h1>
+                        <ul>
+                            <li>벌레</li>
+                            <li>여름</li>
+                            <li>쓴 음식</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div data-anchor="Page 4">
+                <div class="page4_con">
+                    <div>
+                        <h1>배워본 적 있는 언어</h1>
+                        <img src="media/c언어.svg">
+                        <img src="media/c++.png">
+                        <img src="media/java.png">
+                        <img src="media/python.png">
+                    </div>
+    
+                    <div>
+                        <h1>github 링크</h1>
+                        <a href="https://github.com/rosakim1101" target="_blank" title="처음 만든 계정"><img src="media/github.jpg"></a>
+                        <a href="https://github.com/devdong1231" target="_blank" title="나중에 만든 계정"><img src="media/github.jpg"></a>
+                    </div>
+    
+                </div>
+                
+            </div>
+
+        </div>
+
+
+        <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+        <script>
+            new Pageable("#container");
+
+            const content = "안녕하세요\n컴퓨터학과 김동하입니다.";
+            const text = document.querySelector(".text");
+            let i = 0;
+
+            function typing(){
+                let txt = content[i++];
+                text.innerHTML += txt=== "\n" ? "<br/>": txt;
+                if (i > content.length) {
+                    text.textContent = "";
+                    i = 0;
+                }
+            }
+            setInterval(typing, 200)
+        </script>
+        
+    </body>
+</html>

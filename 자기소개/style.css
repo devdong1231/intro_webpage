@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    display: flex;
+}
+
+
+#container > div{
+    text-align: center;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+#intro{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+#menu{
+    top: 0;
+    position: fixed;
+    margin: 0px;
+    width: 100%;
+    z-index: 2;
+    background-color: #A0A0FF;
+}
+
+#menu > ul{
+    padding: 5px;
+    text-align: right;
+}
+
+#menu > ul > li{
+    display: inline-block;
+    width: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pg-wrapper, #container{
+    padding: 0;
+}
+
+.lang{
+    display: inline-flex;
+    list-style-type: none;
+}
+
+#container > div{
+    padding: 50px;
+}
+
+#page-1, #page-3{
+    background-color: #F4EFFF;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+#page-2, #page-4{
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* page 1 */
+
+.text_box{
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 4rem;
+    text-align: left;
+    width: 650px;
+    height: 30%;
+  }
+
+  /* page 2 */
+
+.page2_con, .page4_con{
+    display: flex;
+    font-size: 1.7rem;
+}
+
+h1 {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    color: #A0A0FF;
+    text-align: left;
+    font-size: 4rem;
+    margin-bottom: 50px;
+}
+
+.page2_con > div{
+    display: flex;
+}
+
+
+.page2_con > div > div > ul{
+    text-align: left;
+    list-style-type: none;
+}
+
+#me{
+    width: 250px;
+    margin-right: 200px;
+}
+
+#li_title{
+    display: inline-block;
+    width: 200px;
+    margin: 1px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    color: #A0A0FF;
+}
+
+#li_desc{
+    display: inline-block;
+    width: 300px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+.page3_con{
+    text-align: center;
+    font-family: 'IBM Plex Sans KR', sans-serif;    
+}
+
+.page3_con > div > h1{
+    text-align: c;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.page3_con > div > ul > li{
+    list-style-type: none;
+    font-size: 1.7rem;
+}
+
+
+#like{
+    margin-left: 10px;
+    list-style-type: none;
+    font-size: 1.3rem;
+}
+
+.page4_con > div > h1{
+    text-align: center;
+}
+
+.page4_con{
+    display: block;
+}
+.page4_con > div{
+    margin-top: 70px;
+}
+
+img{
+    margin: 30px;
+    width: 100px;
+}
+
